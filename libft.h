@@ -31,8 +31,10 @@ int		ft_isprint(int c);
 
 //memory functions
 void	*ft_memset(void *s, int c, size_t n);
+void	*memcpy(void *dest, const void *src, size_t n);
 
-//Functions
+//string manipulation
 size_t	ft_strlen(const char *str);
+void	*ft_bzero(void *s, size_t n);
 
 #endif
