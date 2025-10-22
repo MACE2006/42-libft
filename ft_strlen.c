@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/22 18:02:32 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/22 17:08:12 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/22 18:00:59 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
+int	ft_strlen(char *str)
+{
+	int	i;
 
-//Functions
-int	ft_strlen(char *str);
-
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
