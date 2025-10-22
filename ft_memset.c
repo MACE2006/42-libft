@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/22 19:13:24 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/22 19:12:47 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/22 19:20:30 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "stdlib.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_list
+void	*ft_memset(void *s, int c, size_t n)
 {
-	void			*content;
-	struct s_list	*next;
-}		t_list;
+	unsigned char	*p;
 
-//'is' Functions
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-//memory functions
-void	*ft_memset(void *s, int c, size_t n);
-
-//Functions
-size_t	ft_strlen(const char *str);
-
-#endif
+	p = s;
+	while (n-- > 0)
+		*p++ = (unsigned char) c;
+	return (s);
+}

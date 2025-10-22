@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/22 19:13:24 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/22 18:46:16 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/22 18:50:16 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_list
+int	ft_isalpha(int c)
 {
-	void			*content;
-	struct s_list	*next;
-}		t_list;
-
-//'is' Functions
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-//memory functions
-void	*ft_memset(void *s, int c, size_t n);
-
-//Functions
-size_t	ft_strlen(const char *str);
-
-#endif
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
+}
