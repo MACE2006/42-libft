@@ -44,7 +44,7 @@ clean:
 	${RM} ${OBJS}
 
 #Removes all objects files and the output(compiled) file
-fclean:
+fclean: clean
 	${RM} ${NAME}
 
 #Rebuilds the entire program
