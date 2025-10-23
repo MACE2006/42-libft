@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/22 19:13:24 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/23 08:27:18 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_isprint(int c);
 //memory functions
 void	*ft_memset(void *s, int c, size_t n);
 void	*memcpy(void *dest, const void *src, size_t n);
+void	*memmove(void *dest, const void *src, size_t n);
 
 //string manipulation
 size_t	ft_strlen(const char *str);
