@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 14:07:35 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/23 14:22:07 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *pstr);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 //char manipulation
 int		ft_toupper(int c);
