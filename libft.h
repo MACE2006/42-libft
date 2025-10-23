@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 08:41:47 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/23 09:15:41 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 
 //string manipulation
 size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 void	*ft_bzero(void *s, size_t n);
 
 #endif
