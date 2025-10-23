@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 11:30:53 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 12:10:06 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/23 12:13:20 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/23 12:19:14 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
-	size_t	j;
+	char	*dest;
+	int		length;
+	int		i;
 
 	i = 0;
-	if (little[0] == '\0')
-		return ((char *)big);
-	while (big[i] && i < len)
+	length = ft_strlen(s);
+	dest = (char *) malloc(sizeof(char) * (length + 1));
+	while (s[i])
 	{
-		j = 0;
-		while (big[i + j] != '\0' && \
-			big[i + j] == little[j] && i + j < len)
-		{
-			if (little[j + 1] == '\0')
-				return ((char *)&big[i]);
-			++j;
-		}
-		++i;
+		dest[i] = s[i];
+		i++;
 	}
-	return (NULL);
+	dest[i] = '\0';
+	return (dest);
 }
