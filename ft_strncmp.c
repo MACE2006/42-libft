@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:20:22 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 10:33:52 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/23 11:12:32 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (i < n)
 	{
@@ -25,10 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	*s1 = {"Idek ibr"};
-// 	char	*s2 = {"some bullshit"};
-// 	printf("%d", ft_strncmp(s1, s2, 7));
-// }
