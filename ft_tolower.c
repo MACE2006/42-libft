@@ -6,13 +6,13 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:51:11 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 09:52:31 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/23 12:28:19 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' || c <= 'Z')
 		return (c + 32);
