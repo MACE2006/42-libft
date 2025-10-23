@@ -6,7 +6,7 @@
 #    By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:00:19 by cvorley           #+#    #+#              #
-#    Updated: 2025/10/23 09:27:17 by cvorley          ###   ########.fr        #
+#    Updated: 2025/10/23 10:35:21 by cvorley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ NAME = libft.a
 # Mandatory part 1 files
 MANPART1 = ft_strlen.c ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c \
 		ft_isdigit.c ft_isprint.c ft_memset.c ft_bzero.c ft_memcpy.c ft_strlcpy.c \
-		ft_strlcat.c ft_memmove.c
+		ft_strlcat.c ft_memmove.c ft_strchr.c ft_strncmp.c ft_strrchr.c ft_tolower.c \
+		ft_toupper.c
 
 #All source files combined
 SRC = ${MANPART1}
