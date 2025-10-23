@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 07:59:40 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 08:44:32 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/23 08:41:55 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/23 09:02:56 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*pdest;
-	unsigned char	*psrc;
+	char		*pdest;
+	const char	*psrc;
 
 	if (!dest && !src)
 		return (NULL);
-	pdest = (unsigned char *)dest;
-	psrc = (unsigned char *)src;
-	while (n--)
-		*pdest++ = *psrc++;
+	pdest = dest;
+	psrc = src;
+	if (dest < src)
+	{
+		while (n--)
+			*pdest++ = *psrc++;
+	}
+	else
+	{
+		pdest += n;
+		psrc += n;
+		while (n--)
+			*(--pdest) = *(--psrc);
+	}
 	return (dest);
 }
