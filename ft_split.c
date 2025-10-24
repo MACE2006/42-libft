@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:23:38 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 14:46:05 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/24 08:46:55 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ static char	*fill_word(char const *s, char c)
 	int		i;
 
 	len = 0;
-	while (s[len] && s[len != c])
+	i = 0;
+	while (s[len] && s[len] != c)
 		len++;
 	word = (char *) malloc(sizeof(char) * (len + 1));
 	if (!word)
@@ -53,8 +54,20 @@ static char	*fill_word(char const *s, char c)
 		i++;
 	}
 	word[i] = '\0';
-	printf("%s", word);
 	return (word);
+}
+
+static void	free_all(char **words)
+{
+	int	i;
+
+	i = 0;
+	while (words[i])
+	{
+		free(words[i]);
+		i++;
+	}
+	free(words);
 }
 
 char	**ft_split(char const *s, char c)
@@ -62,6 +75,7 @@ char	**ft_split(char const *s, char c)
 	int	i;
 	char **words;
 
+	i = 0;
 	words = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!words || !s)
 		return (NULL);
@@ -72,13 +86,12 @@ char	**ft_split(char const *s, char c)
 		if (*s && *s != c) 
 		{
 			words[i] = fill_word(s, c);
+			if (!words[i++])
+				return(free_all(words), NULL);
+			while (*s && *s != c)
+				s++;
 		}
 	}
-}
-
-int	main()
-{
-	char	*str = "ok i really dont know uno?";
-
-	ft_split(str, ' ');
+	words[i] = NULL;
+	return (words);
 }
