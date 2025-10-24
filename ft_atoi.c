@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:00:01 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 12:09:34 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/24 14:44:04 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_atoi(const char *pstr)
 	operator = 1;
 	while (*pstr == ' ' || (*pstr >= 9 && *pstr <= 13))
 		pstr++;
-	while (*pstr == '-' || *pstr == '+')
+	if (*pstr == '-' || *pstr == '+')
 	{
 		if (*pstr == '-')
-			operator *= -1;
+			operator = -1;
 		pstr++;
 	}
 	while (*pstr >= '0' && *pstr <= '9')

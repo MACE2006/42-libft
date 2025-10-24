@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:16:45 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/23 09:26:06 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/24 14:00:36 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	if (n > d_len)
 		sum = d_len + s_len;
 	else
-		sum = s_len + n;
-	while (src[i] && n > (d_len + 1))
+		return (s_len + n);
+	while (src[i] && (d_len + 1) < n)
 	{
 		dest[d_len] = src[i];
 		i++;
