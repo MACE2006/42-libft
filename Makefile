@@ -6,7 +6,7 @@
 #    By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:00:19 by cvorley           #+#    #+#              #
-#    Updated: 2025/10/24 09:42:39 by cvorley          ###   ########.fr        #
+#    Updated: 2025/10/24 10:09:18 by cvorley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC = ${MANPART1} ${MANPART2}
 #All Object files combined
 OBJS = ${SRC:.c=.o}
 
-CC = gcc #Compiler
+CC = cc #Compiler
 RM = rm -f #Remove command with force flag
 CFLAGS = -Werror -Wall -Wextra #Compiler flags
 INCLUDE = -I . #Include flag for compiler
@@ -40,7 +40,7 @@ INCLUDE = -I . #Include flag for compiler
 $(NAME): ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
-#The first and default targer. Will run the previous command
+#The first and default targert. Will run the previous command
 all: ${NAME}
 
 #Removes all the object files

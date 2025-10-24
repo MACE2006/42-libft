@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 09:51:11 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 09:55:18 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/24 09:43:54 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/24 09:46:21 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char *ft_strmapi(char const *s, char (*f)(unsigned int), char)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+	
 }
