@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:23:38 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 08:46:55 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/24 08:51:21 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,22 +72,24 @@ static void	free_all(char **words)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	char **words;
+	int		i;
+	char	**words;
 
 	i = 0;
-	words = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!words || !s)
+	if (!s)
 		return (NULL);
-	while (*s) 
+	words = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!words)
+		return (NULL);
+	while (*s)
 	{
-		while (*s && *s == c) 
+		while (*s && *s == c)
 			s++;
-		if (*s && *s != c) 
+		if (*s && *s != c)
 		{
 			words[i] = fill_word(s, c);
 			if (!words[i++])
-				return(free_all(words), NULL);
+				return (free_all(words), NULL);
 			while (*s && *s != c)
 				s++;
 		}
