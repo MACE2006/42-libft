@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 13:28:22 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 13:36:58 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/24 13:37:37 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/24 13:42:58 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
