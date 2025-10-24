@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:23:38 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 08:53:40 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/24 09:21:11 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	i;
 	int	words;
@@ -35,7 +35,7 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-static char	*fill_word(char const *s, char c)
+static char	*ft_fill_word(char const *s, char c)
 {
 	int		len;
 	char	*word;
@@ -57,7 +57,7 @@ static char	*fill_word(char const *s, char c)
 	return (word);
 }
 
-static void	free_all(char **words)
+static void	ft_free_all(char **words)
 {
 	int	i;
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	words = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
+	words = (char **) malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!words)
 		return (NULL);
 	while (*s)
@@ -87,9 +87,9 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			words[i] = fill_word(s, c);
+			words[i] = ft_fill_word(s, c);
 			if (!words[i++])
-				return (free_all(words), NULL);
+				return (ft_free_all(words), NULL);
 			while (*s && *s != c)
 				s++;
 		}

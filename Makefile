@@ -6,7 +6,7 @@
 #    By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:00:19 by cvorley           #+#    #+#              #
-#    Updated: 2025/10/24 08:47:00 by cvorley          ###   ########.fr        #
+#    Updated: 2025/10/24 09:42:39 by cvorley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ MANPART1 = ft_strlen.c ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c \
 		ft_toupper.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c
 
 #Mandatory part 2 files
-MANPART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c
+MANPART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c
 #All source files combined
 SRC = ${MANPART1} ${MANPART2}
 
