@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 static int	count_words(char const *s, char c)
 {
@@ -33,6 +35,27 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
+static char	*fill_word(char const *s, char c)
+{
+	int		len;
+	char	*word;
+	int		i;
+
+	len = 0;
+	while (s[len] && s[len != c])
+		len++;
+	word = (char *) malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	printf("%s", word);
+	return (word);
+}
 
 char	**ft_split(char const *s, char c)
 {
@@ -42,4 +65,20 @@ char	**ft_split(char const *s, char c)
 	words = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!words || !s)
 		return (NULL);
+	while (*s) 
+	{
+		while (*s && *s == c) 
+			s++;
+		if (*s && *s != c) 
+		{
+			words[i] = fill_word(s, c);
+		}
+	}
+}
+
+int	main()
+{
+	char	*str = "ok i really dont know uno?";
+
+	ft_split(str, ' ');
 }
