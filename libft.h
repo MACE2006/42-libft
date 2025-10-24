@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 11:09:54 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/24 13:28:00 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t n, size_t size);
 char	*ft_strdup(const char *s);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+//print functions
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 //string manipulation
 size_t	ft_strlen(const char *str);
