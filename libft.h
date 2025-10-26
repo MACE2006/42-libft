@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 13:52:30 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/26 10:55:46 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //char manipulation
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+//linked list manipulation
+t_list	*ft_lstnew(void	*content);
 
 #endif
