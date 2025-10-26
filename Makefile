@@ -6,7 +6,7 @@
 #    By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:00:19 by cvorley           #+#    #+#              #
-#    Updated: 2025/10/24 10:09:18 by cvorley          ###   ########.fr        #
+#    Updated: 2025/10/26 11:02:31 by cvorley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,18 @@ MANPART1 = ft_strlen.c ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c \
 #Mandatory part 2 files
 MANPART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
+
+#Bonus src files
+BONUS = ft_lstnew.c
+
 #All source files combined
 SRC = ${MANPART1} ${MANPART2}
 
 #All Object files combined
 OBJS = ${SRC:.c=.o}
+
+#Bonus objects
+BONUS_OBJS = ${BONUS:.c=.o}
 
 CC = cc #Compiler
 RM = rm -f #Remove command with force flag
@@ -44,9 +51,13 @@ $(NAME): ${OBJS}
 #The first and default targert. Will run the previous command
 all: ${NAME}
 
+#Bonus target
+bonus: ${OBJS} ${BONUS_OBJS}
+	ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+
 #Removes all the object files
 clean: 
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${BONUS_OBJS}
 
 #Removes all objects files and the output(compiled) file
 fclean: clean
@@ -56,4 +67,4 @@ fclean: clean
 re: fclean all
 
 #Declare the targets
-.PHONY: help all clean fclean re	
+.PHONY: all clean fclean re	

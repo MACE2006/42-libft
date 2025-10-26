@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:31:39 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/26 10:55:46 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/26 11:12:15 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,6 @@ int		ft_tolower(int c);
 
 //linked list manipulation
 t_list	*ft_lstnew(void	*content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
