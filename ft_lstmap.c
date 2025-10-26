@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 11:42:18 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/26 11:47:48 by cvorley          ###   ########.fr       */
+/*   Created: 2025/10/26 12:08:51 by cvorley           #+#    #+#             */
+/*   Updated: 2025/10/26 12:14:12 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 {
-	t_list	*next;
-	t_list	*current;
+	t_list	*n_lst;
+	t_list	*n_node;
 
-	if (lst && del)
+	if (!lst || !f)
+		return (NULL);
+	n_lst = NULL;
+	n_node = NULL;
+	while (lst)
 	{
-		current = *lst;
-		while (current)
+		n_node = ft_lstnew(f(lst->content));
+		if (!n_node)
 		{
-			next = current->next;
-			del(current->content);
-			free(current);
-			current = next;
+			ft_lstclear(&n_lst, del);
+			return (NULL);
 		}
-		*lst = NULL;
+		ft_lstadd_back(&n_lst, n_node);
+		lst = lst->next;
 	}
+	return (n_lst);
 }
