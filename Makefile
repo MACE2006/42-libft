@@ -6,7 +6,7 @@
 #    By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:00:19 by cvorley           #+#    #+#              #
-#    Updated: 2025/10/26 11:33:28 by cvorley          ###   ########.fr        #
+#    Updated: 2025/10/26 11:43:21 by cvorley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ MANPART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi
 		ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
 
 #Bonus src files
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c
 
 #All source files combined
 SRC = ${MANPART1} ${MANPART2}
