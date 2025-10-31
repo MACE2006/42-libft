@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:08:18 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 09:22:48 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/31 15:06:55 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	j;
 
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1);
 	i = 0;
 	while (s1[i] && ft_is_set(s1[i], set))

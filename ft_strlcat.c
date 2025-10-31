@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:16:45 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 14:00:36 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/31 14:56:37 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 
 	i = 0;
 	sum = 0;
+	if (n == 0)
+		return (1);
 	d_len = ft_strlen(dest);
 	s_len = ft_strlen(src);
 	if (n > d_len)

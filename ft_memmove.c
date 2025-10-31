@@ -6,7 +6,7 @@
 /*   By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:41:55 by cvorley           #+#    #+#             */
-/*   Updated: 2025/10/24 11:45:00 by cvorley          ###   ########.fr       */
+/*   Updated: 2025/10/31 15:00:05 by cvorley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*pdest;
 	const char	*psrc;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	pdest = dest;
 	psrc = src;
