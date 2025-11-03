@@ -6,7 +6,7 @@
 #    By: cvorley <cvorley@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:00:19 by cvorley           #+#    #+#              #
-#    Updated: 2025/10/31 14:44:28 by cvorley          ###   ########.fr        #
+#    Updated: 2025/11/03 11:32:04 by cvorley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,9 +53,9 @@ $(NAME): ${OBJS}
 all: ${NAME}
 
 #libft-unit
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+#so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
+#	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 #Bonus target
 bonus: ${OBJS} ${BONUS_OBJS}
@@ -73,4 +73,4 @@ fclean: clean
 re: fclean all
 
 #Declare the targets
-.PHONY: all clean fclean re so
+.PHONY: all clean fclean re
